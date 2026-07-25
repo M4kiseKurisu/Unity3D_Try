@@ -11,3 +11,12 @@
 - 不要在代码中加入膜法数字，将数字赋值给有语义的变量
 
 - 完成内容：完成玩家的基本移动逻辑（目前只能感应固定键并移动到代码制定位置），同时添加移动结束逻辑（当距离目标位置小于固定值时视为移动结束）
+
+#### Mouse Raycast
+
+- Input.mousePosition返回的是当前鼠标在屏幕上的那个像素点上，并非鼠标在游戏世界中的位置
+- Camera.main返回的是当前场景中Tag为MainCamera的对象
+- Camera.main.ScreenPointToRay(Input.mousePosition)获取一条从Main Camera到屏幕像素点的游戏空间内的射线
+- Physics.Raycast(ray)可以检测当前射线是否射到Collider上（与视觉效果无关，只检测Collider）
+
+- 完成内容：创建一条从摄像机到鼠标位置的射线，并检测是否经过Collider
