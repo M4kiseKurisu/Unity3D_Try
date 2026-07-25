@@ -20,3 +20,11 @@
 - Physics.Raycast(ray)可以检测当前射线是否射到Collider上（与视觉效果无关，只检测Collider）
 
 - 完成内容：创建一条从摄像机到鼠标位置的射线，并检测是否经过Collider
+
+#### Mouse World Position
+
+- 可以通过这个形式：Physics.Raycast(ray, out RaycastHit raycastHit)获取当前射线探测到的对象：raycastHit的相关信息
+- LayerMask一种表示形式是int，例如当前的Layer是6那么就需要用1 << 6这样的位运算填充对应LayerMask属性，或者直接设置一个这个对象并在unity inspector中修改
+- 设置单例/静态方法的时候需要详细思考，确定其必要性
+
+- 完成内容：使用一个sphere测试鼠标检测情况，使用一个单例/静态类利用Raycast获取当前鼠标位置，为地面plane对象添加一个专门的layer供raycast进行检测
