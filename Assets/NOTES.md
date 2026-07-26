@@ -34,3 +34,7 @@
 - Input.GetMouseButtonDown(0)代表按下左键，如果是监测按下右键则应该使用1
 
 - 完成内容：基于前面内容，检测鼠标左键输入，并将target位置设置为鼠标点击位置，让控制对象向鼠标点击位置移动
+
+#### Unit Animations Setup
+
+
