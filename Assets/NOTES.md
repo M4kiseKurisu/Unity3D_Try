@@ -37,4 +37,8 @@
 
 #### Unit Animations Setup
 
+- 完成内容：从mixamo网站下载持枪移动动画，并进行调整适配
+
+#### Unit Animator
+
 
