@@ -47,3 +47,9 @@
 
 - 完成内容：为Animator添加一个切换所需的bool：IsWalking，在Unit中设置：如果当前对象正在移动则设置IsWalking也为true，反之亦然，这样移动时动画也正确
 
+#### Unit Rotate when Moving
+
+- 通过修改transform.forward改变对象的朝向方向
+- 如果想要实现渐变效果，可以使用Vector3.Lerp对两个向量进行一个时间段上的线性插值（如果第一个向量随时间变化，实际是一个从快到慢渐出的效果）
+
+- 完成内容：让玩家在移动的时候面向方向旋转到移动方向，同时使用Lerp让这个面向方向渐进而非瞬间改变
