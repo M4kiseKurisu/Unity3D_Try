@@ -41,4 +41,9 @@
 
 #### Unit Animator
 
+- 完成内容：创建animator并添加两个基本状态，为玩家的手骨架增加一把枪
+
+#### Unit Animator Parameters
+
+- 完成内容：为Animator添加一个切换所需的bool：IsWalking，在Unit中设置：如果当前对象正在移动则设置IsWalking也为true，反之亦然，这样移动时动画也正确
 
