@@ -53,3 +53,9 @@
 - 如果想要实现渐变效果，可以使用Vector3.Lerp对两个向量进行一个时间段上的线性插值（如果第一个向量随时间变化，实际是一个从快到慢渐出的效果）
 
 - 完成内容：让玩家在移动的时候面向方向旋转到移动方向，同时使用Lerp让这个面向方向渐进而非瞬间改变
+
+#### Unit Selection
+
+- 创建的管理游戏的System可以挂载在scene中的同名空对象上
+- 使用这种try api进行component的获取可以直接获取out参数，后需不需要进行null判断（直接通过api输出bool判断）：transform.TryGetComponent<Unit>(out Unit unit)
+- Project Setting > Script Execution Order可以指定特定脚本的Awake，Start等时序方法的具体执行顺序
