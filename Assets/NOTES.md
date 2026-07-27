@@ -59,3 +59,16 @@
 - 创建的管理游戏的System可以挂载在scene中的同名空对象上
 - 使用这种try api进行component的获取可以直接获取out参数，后需不需要进行null判断（直接通过api输出bool判断）：transform.TryGetComponent<Unit>(out Unit unit)
 - Project Setting > Script Execution Order可以指定特定脚本的Awake，Start等时序方法的具体执行顺序
+
+- 完成内容：添加一个UnitActionSystem控制当前的对象选择情况，并通过点击时检测鼠标raycast的对象进行控制对象切换
+
+#### Unit Selected Visual
+
+- 当两个对象y相同的时候，unity的渲染可能因为不知道覆盖关系而导致闪烁，可以略微提高其中一个对象的y值
+- 解耦和的一个方法：使用事件（观察者模式），一个标准的事件使用public event EventHandler(object sender, EventArgs e)，相当于csharp底层定义的一个delegate
+- 这种EventHandler的触发方式：OnSelectedUnitChanged?.Invoke(this, EventArgs.Empty); 第一个是sender，第二个是参数表
+- EventHandler可以订阅的方法定义：private void UnitActionSystem_OnSelectedUnitChanged(object sender, EventArgs empty) {...}
+- 所有Awake都在所有Start前触发：在awake时只设置自身，在start时可以和其他外部对象交流
+- 类似UnitActionSystem这样的系统可以考虑使用单例模式，暴露get让外界调用自身
+
+- 完成内容：通过一个事件监听选择角色切换，然后让当前正在控制的对象脚下出现绿圈

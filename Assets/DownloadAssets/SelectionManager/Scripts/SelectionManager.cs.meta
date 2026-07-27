@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bcb27becd7a1dde4299d96e6fb5bf458
+timeCreated: 1460091729
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - hoverProjector: {fileID: 117136, guid: 0c89e3599e7dcc346bd0215851b68c0a, type: 2}
+  - selectionProjector: {fileID: 115082, guid: 16a019904df21f94ebadcb47c165a2f8, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
