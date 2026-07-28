@@ -72,3 +72,13 @@
 - 类似UnitActionSystem这样的系统可以考虑使用单例模式，暴露get让外界调用自身
 
 - 完成内容：通过一个事件监听选择角色切换，然后让当前正在控制的对象脚下出现绿圈
+
+#### Grid System
+
+- 一个继承MonoBehaviour的对象无法使用同名构造函数进行初始化
+- Debug.DrawLine方法可以通过两个输入的向量，在scene中渲染一条直线
+- 像GridPosition这样的简单数据类型可以考虑设置为struct，结构体不同于类，是一种值类型，进行参数传递传递的是副本而不是引用
+- 为了让GridPosition在被debug.log打印时输出可用信息，可以人工重写这个结构体的tostring方法（debug.log实际上调用的就是这个方法）
+- Mathf.RoundToInt()方法可以将float向下取整为int
+
+- 完成内容：使用一个GridSystem基本类控制当前场景内的grid情况，使用一个GridPosition数据类存储格子相关信息，并在GridSystem中完成grid position到world position的互相转换（外界可以调用转换方法），最后重写了GridPosition的ToString方法
