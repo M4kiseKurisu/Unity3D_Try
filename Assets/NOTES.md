@@ -95,3 +95,13 @@
 - 注意保持Scripts文件夹的结构合理性
 
 - 完成内容：为上一节创建的GridDebugObject添加可以改变其text，展示debug内容的脚本，重写这个GridDebugObject对应的GridObject的ToString方法，让其能够显示这个Object的相关信息
+
+#### Level Grid
+
+- public GridPosition GetGridPosition(Vector3 worldPosition) => gridSystem.GetGridPosition(worldPosition);这是一种lambda表达式对于方法的简写，效果完全等同于使用一般方法的大括号
+- 如果想使用== / !=对自定义对象进行比较，需要使用public static bool operator ==(GridPosition a, GridPosition b) / public static bool operator !=(GridPosition a, GridPosition b)这种方式重载运算符
+- 可以重写Equals(object obj)和GetHashCode()，用来实现自定义的相等比较，防止对于结构体类型相等的判断需要使用默认的低性能反射机制
+- 可以继承: IEquatable<GridPosition>，需要重新写Equals并用上面的Equals结果进行bool输出
+
+- 完成内容：使用一个LevelGrid存储和管理Unit在GridObject上的情况，同时要考虑多个Unit在同一个格子上的情况
+- 完成内容：为GridObject的ToString方法输出的字符串后面添加GridObject上面的unit的信息
