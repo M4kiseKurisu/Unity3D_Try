@@ -89,3 +89,9 @@
 - Transform和GameObject几乎可以混用，因为每个游戏对象一定有一个Transform Component，而每个Transform也必然依存于一个GameObject
 
 - 完成内容：创建一个GridObject类型，让Grid对每一个格子生成一个此类型存储游戏过程中此格子上的相关信息，使用一个二维数组储存当前gridSystem中所有创建的gridObject，添加一个gridDebugObject TMP对象用来测试生成GridObject情况
+
+#### Grid Object Debug
+
+- 注意保持Scripts文件夹的结构合理性
+
+- 完成内容：为上一节创建的GridDebugObject添加可以改变其text，展示debug内容的脚本，重写这个GridDebugObject对应的GridObject的ToString方法，让其能够显示这个Object的相关信息
