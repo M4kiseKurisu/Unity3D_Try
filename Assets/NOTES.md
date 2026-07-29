@@ -82,3 +82,10 @@
 - Mathf.RoundToInt()方法可以将float向下取整为int
 
 - 完成内容：使用一个GridSystem基本类控制当前场景内的grid情况，使用一个GridPosition数据类存储格子相关信息，并在GridSystem中完成grid position到world position的互相转换（外界可以调用转换方法），最后重写了GridPosition的ToString方法
+
+#### Grid Object
+
+- 使用GridObject[,] gridObjectArray;创建一个二维数组引用，在初始化中gridObjectArray = new GridObject[width, height];这样进行实际堆空间引用
+- Transform和GameObject几乎可以混用，因为每个游戏对象一定有一个Transform Component，而每个Transform也必然依存于一个GameObject
+
+- 完成内容：创建一个GridObject类型，让Grid对每一个格子生成一个此类型存储游戏过程中此格子上的相关信息，使用一个二维数组储存当前gridSystem中所有创建的gridObject，添加一个gridDebugObject TMP对象用来测试生成GridObject情况
