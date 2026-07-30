@@ -105,3 +105,13 @@
 
 - 完成内容：使用一个LevelGrid存储和管理Unit在GridObject上的情况，同时要考虑多个Unit在同一个格子上的情况
 - 完成内容：为GridObject的ToString方法输出的字符串后面添加GridObject上面的unit的信息
+
+#### Cinemachine
+
+- cinemachine包需要从package manager中下载，并非创建工程自带
+- 在新版cinemachine中，如果是3d场景，需要调整Procedural components中的position control为follow（相当于旧版transposer）才能够实现镜头跟随，如果是none无法触发跟随
+- 控制cinemachine追踪的对象和camera的关系：调整follow offset
+- 如果要考虑到镜头旋转：rotation control改成rotation composer:时刻旋转镜头让target保持在镜头内特定区域/rotate with follow target直接让镜头跟随目标进行同步旋转
+- 可通过damping调节镜头追踪阻尼感
+
+- 完成内容：创建一个cinemachine及其对应的追踪target空对象，初步建立镜头跟随机制
