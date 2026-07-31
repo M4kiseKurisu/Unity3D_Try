@@ -115,3 +115,10 @@
 - 可通过damping调节镜头追踪阻尼感
 
 - 完成内容：创建一个cinemachine及其对应的追踪target空对象，初步建立镜头跟随机制
+
+#### Camera Move and Rotate
+
+- 注意，如果一个对象同时可能出现move和rotate活动，不能直接加移动方向，而是要先使用transform.forward再乘以纵向移动，transform.right乘以横向移动，这样通过使用transform已经将其rotate考虑在内
+- 调整一个transform的旋转情况：修改transform.eulerAngles
+
+- 完成内容：通过代码控制镜头上下左右移动、左右水平旋转
