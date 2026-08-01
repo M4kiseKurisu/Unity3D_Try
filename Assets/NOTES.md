@@ -122,3 +122,12 @@
 - 调整一个transform的旋转情况：修改transform.eulerAngles
 
 - 完成内容：通过代码控制镜头上下左右移动、左右水平旋转
+
+#### Camera Zoom
+
+- 镜头拉近的方法：降低镜头fov/降低follow offset y、z
+- 监控鼠标滚轮输入：Input.mouseScrollDelta，当上滚的时候返回二维向量y值为1；向下滚的时候返回二维向量y值为0
+- 想要定义一些边界数据，可以使用：private const float
+- UnityEngine提供：Mathf.Clamp(当前值，最大值，最小值)，可以为当前值限定范围，超出范围则将值改为界限
+
+- 完成内容：通过代码控制镜头的缩放（检测鼠标滚轮）
