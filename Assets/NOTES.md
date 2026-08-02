@@ -131,3 +131,9 @@
 - UnityEngine提供：Mathf.Clamp(当前值，最大值，最小值)，可以为当前值限定范围，超出范围则将值改为界限
 
 - 完成内容：通过代码控制镜头的缩放（检测鼠标滚轮）
+
+#### Move Action
+
+- 想要对gridPosition进行加减同样需要进行运算符重载：public static GridPosition operator +(...)
+
+- 完成内容：将点击移动角色的操作从Unit移动到了MoveAction
