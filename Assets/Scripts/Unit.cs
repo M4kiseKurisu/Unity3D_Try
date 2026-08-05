@@ -22,11 +22,11 @@ public class Unit : MonoBehaviour
         }
     }
 
-    public MoveAction getMoveAction() {
+    public MoveAction GetMoveAction() {
         return moveAction;
     }
 
-    public GridPosition getGridPosition() {
+    public GridPosition GetGridPosition() {
         return gridPosition;
     }
 }

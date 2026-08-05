@@ -136,4 +136,8 @@
 
 - 想要对gridPosition进行加减同样需要进行运算符重载：public static GridPosition operator +(...)
 
-- 完成内容：将点击移动角色的操作从Unit移动到了MoveAction
+- 完成内容：将点击移动角色的操作从Unit移动到了MoveAction，在MoveAction中进行玩家可达gridPosition的判定
+
+#### Move Action Validate
+
+- 完成内容：在鼠标点击，通过MoveAction移动之前，首先进行判断：鼠标点击位置的grid是否：超出网格范围、为当前对象网格、网格超出移动范围、网格上有其他对象等。只有这个点击有效，不出现以上情况才会进行实际移动
