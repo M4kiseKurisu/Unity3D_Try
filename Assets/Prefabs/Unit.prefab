@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2397192926939479372}
+  - component: {fileID: 6454294877896881208}
   - component: {fileID: 7918377122916214343}
   - component: {fileID: 6126355077093712105}
-  - component: {fileID: 6454294877896881208}
+  - component: {fileID: 5732595260025969934}
   m_Layer: 7
   m_Name: Unit
   m_TagString: Untagged
@@ -36,6 +37,27 @@ Transform:
   - {fileID: 6490078736287835060}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6454294877896881208
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3918104638863543879}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.53176916, y: 1.6221204, z: 0.524109}
+  m_Center: {x: -0.022889286, y: 0.85070324, z: -0.015266612}
 --- !u!114 &7918377122916214343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,27 +84,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MoveAction
   unitAnimator: {fileID: 6197062002087058705}
   maxMoveDistance: 4
---- !u!65 &6454294877896881208
-BoxCollider:
+--- !u!114 &5732595260025969934
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3918104638863543879}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.53176916, y: 1.6221204, z: 0.524109}
-  m_Center: {x: -0.022889286, y: 0.85070324, z: -0.015266612}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27f47a52ea1fe464ca45b656b895dfbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpinAction
 --- !u!1 &7614949507732061260
 GameObject:
   m_ObjectHideFlags: 0

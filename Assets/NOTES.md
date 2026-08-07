@@ -147,3 +147,12 @@
 - 使用Instantiate(prefab_transform, position, rotation)在场景中从prefab创建对象
 
 - 完成内容：添加当前对象可以前往的grid的视觉效果，主要是添加了一个可达grid的显示prefab以及一个控制可达grid显示的单例GridSystemVisual
+
+#### Base Action Class
+
+- 如果子类需要覆盖重写父类的某个方法，父类对象上应该添加virtual关键字，子类对象上应该添加override关键字
+- 子类方法如果想要使用父类同名方法，可以使用base
+- 如果想要确保抽象基类不会被new创建，可以为其添加abstract关键字
+
+- 完成内容：为操控对象添加一个点击右键原地旋转360度的spinAction
+- 完成内容：为moveAction和spinAction添加一个基类baseAction，这样可以将这些具体类的共同部分抽象到基类中
