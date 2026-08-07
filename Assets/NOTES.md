@@ -141,3 +141,9 @@
 #### Move Action Validate
 
 - 完成内容：在鼠标点击，通过MoveAction移动之前，首先进行判断：鼠标点击位置的grid是否：超出网格范围、为当前对象网格、网格超出移动范围、网格上有其他对象等。只有这个点击有效，不出现以上情况才会进行实际移动
+
+#### Grid Visual
+
+- 使用Instantiate(prefab_transform, position, rotation)在场景中从prefab创建对象
+
+- 完成内容：添加当前对象可以前往的grid的视觉效果，主要是添加了一个可达grid的显示prefab以及一个控制可达grid显示的单例GridSystemVisual

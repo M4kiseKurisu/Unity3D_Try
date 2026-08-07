@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoveAction
   unitAnimator: {fileID: 6197062002087058705}
+  maxMoveDistance: 4
 --- !u!65 &6454294877896881208
 BoxCollider:
   m_ObjectHideFlags: 0
