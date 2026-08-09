@@ -156,3 +156,11 @@
 
 - 完成内容：为操控对象添加一个点击右键原地旋转360度的spinAction
 - 完成内容：为moveAction和spinAction添加一个基类baseAction，这样可以将这些具体类的共同部分抽象到基类中
+
+#### Single Active Action
+
+- 可以使用委托delegate将方法当作参数传入其他方法,举例：public delegate void SpinCompleteDelegate(); public void Spin(SpinCompleteDelegate onSpinComplete) {}
+- 委托传入的方法类型要和委托类型相同
+- csharp有两种内置的delegate类型：action（无返回值）和func（有返回值）
+
+- 完成内容：添加一个isBusy，防止不同的Action同时被调用，确保一个时间只有一个action在运行

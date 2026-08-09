@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class SpinAction : BaseAction
@@ -11,11 +12,14 @@ public class SpinAction : BaseAction
         transform.eulerAngles += new Vector3(0, spinAddAmount, 0);
         
         totalSpinAmount += spinAddAmount;
-        if (totalSpinAmount >= 360f) 
+        if (totalSpinAmount >= 360f) {
             isActive = false;
+            onActionComplete();
+        }
     }
     
-    public void Spin() {
+    public void Spin(Action onActionComplete) {
+        this.onActionComplete = onActionComplete;
         isActive = true;
         totalSpinAmount = 0;
     }
