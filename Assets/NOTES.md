@@ -193,3 +193,7 @@
 
 - 完成内容：改变架构方式，使用一个虚方法TakeAction代替Spin和Move，这样就可以在UnitActionSystem中直接调用这个虚方法，不需要进行子类型的区分，同时为基类添加gridPosition是否有效的判断方法
 - 完成内容：确保点击下方button时不会触发对应对象的移动，同时当点击spin时有效gridPosition的地块ui进行更新
+
+#### Selected Action UI Visual
+
+- 完成内容：为当前选择动作添加一个ui，并为selected Action的设置添加一个事件，让选择动作ui刷新方法订阅这个事件
