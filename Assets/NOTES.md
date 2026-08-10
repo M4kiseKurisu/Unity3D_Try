@@ -168,3 +168,14 @@
 #### UI Setup
 
 - 完成内容：添加canvas并修改canvas scaler配置
+
+#### Unit Action System UI
+
+- 在制作button ui的时候可以添加outline / shadow组件，提升美观效果
+- 多个ui的排列效果：在父对象中添加grid layout group
+- GetComponents<T>可以直接获取当前对象上所有T类型的component引用
+- 想要强制子对象实现父对象的虚函数，需要父对象函数添加abstract关键字并忽略函数体：public abstract string GetActionName();
+- .ToUpper()将字符串所有字符转化为大写
+
+- 完成内容：添加地步动作按钮组，并让此组订阅操控玩家切换事件以刷新ui，制作行为按钮ui prefab，让其显示操控对象绑定的action类型名
+- 完成内容：让baseAction添加输出字符串（当前action名）的虚函数，并让子类分别实现
