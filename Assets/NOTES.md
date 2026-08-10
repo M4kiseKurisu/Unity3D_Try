@@ -179,3 +179,10 @@
 
 - 完成内容：添加地步动作按钮组，并让此组订阅操控玩家切换事件以刷新ui，制作行为按钮ui prefab，让其显示操控对象绑定的action类型名
 - 完成内容：让baseAction添加输出字符串（当前action名）的虚函数，并让子类分别实现
+
+#### Click UI to Select Action
+
+- 可以在委托处使用匿名函数而非单独定义的方法：button.onClick.AddListener(() => {/*code*/})
+- 可以使用switch(父对象)，并在不同case中使用不同子类型的方式进行判断和不同逻辑的处理
+
+- 完成内容：修改UnitActionSystem，记录当前的selected Action并确保鼠标左键点击时激活记录的selected Action执行逻辑
