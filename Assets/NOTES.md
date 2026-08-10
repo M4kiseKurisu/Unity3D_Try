@@ -164,3 +164,7 @@
 - csharp有两种内置的delegate类型：action（无返回值）和func（有返回值）
 
 - 完成内容：添加一个isBusy，防止不同的Action同时被调用，确保一个时间只有一个action在运行
+
+#### UI Setup
+
+- 完成内容：添加canvas并修改canvas scaler配置
