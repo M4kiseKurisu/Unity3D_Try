@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class UnitActionSystem : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class UnitActionSystem : MonoBehaviour
     
     private void Update() {
         if (isBusy) return;
-
+        if (EventSystem.current.IsPointerOverGameObject()) return;
         if (TryHandleUnitSelection()) return;
         HandleSelectedAction();
     }
@@ -35,17 +36,9 @@ public class UnitActionSystem : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) {
             GridPosition mouseGridPosition = LevelGrid.Instance.GetGridPosition(MouseWorld.GetPosition());
             
-            switch (selectedAction) {
-                case MoveAction moveAction:
-                    if (moveAction.IsValidActionGridPosition(mouseGridPosition)) {
-                        SetBusy();
-                        moveAction.Move(mouseGridPosition, ClearBusy);
-                    }
-                    break;
-                case SpinAction spinAction:
-                    SetBusy();
-                    spinAction.Spin(ClearBusy);
-                    break;
+            if (selectedAction.IsValidActionGridPosition(mouseGridPosition)) {
+                SetBusy();
+                selectedAction.TakeAction(mouseGridPosition, ClearBusy);
             }
         }
     }
@@ -63,6 +56,7 @@ public class UnitActionSystem : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit raycastHit, float.MaxValue, unitLayerMask))
                 if (raycastHit.transform.TryGetComponent<Unit>(out Unit unit)) {
+                    if (unit == selectedUnit) return false;
                     SetSelectionUnit(unit);
                     return true;
                 }
@@ -83,5 +77,9 @@ public class UnitActionSystem : MonoBehaviour
 
     public Unit GetSelectedUnit() {
         return selectedUnit;
+    }
+
+    public BaseAction GetSelectedAction() {
+        return selectedAction;
     }
 }

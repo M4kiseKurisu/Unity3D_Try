@@ -186,3 +186,10 @@
 - 可以使用switch(父对象)，并在不同case中使用不同子类型的方式进行判断和不同逻辑的处理
 
 - 完成内容：修改UnitActionSystem，记录当前的selected Action并确保鼠标左键点击时激活记录的selected Action执行逻辑
+
+#### Generic Take Action
+
+- 可以使用EventSystem.current.IsPointerOverGameObject()判断当前鼠标是否在ui对象上
+
+- 完成内容：改变架构方式，使用一个虚方法TakeAction代替Spin和Move，这样就可以在UnitActionSystem中直接调用这个虚方法，不需要进行子类型的区分，同时为基类添加gridPosition是否有效的判断方法
+- 完成内容：确保点击下方button时不会触发对应对象的移动，同时当点击spin时有效gridPosition的地块ui进行更新
