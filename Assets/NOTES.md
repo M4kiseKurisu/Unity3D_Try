@@ -197,3 +197,7 @@
 #### Selected Action UI Visual
 
 - 完成内容：为当前选择动作添加一个ui，并为selected Action的设置添加一个事件，让选择动作ui刷新方法订阅这个事件
+
+#### Action Busy UI
+
+- 完成内容：为action行动期间添加一个繁忙ui遮盖动作按钮，同时让这个ui的相关逻辑订阅繁忙事件
