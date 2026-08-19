@@ -212,4 +212,12 @@
 - 可以使用静态的事件：public static event EventHandler OnAnyActionPointsChanged;来代表所有此类对象均会触发的事件
 
 - 完成内容：添加一个回合系统，以及与之匹配的当前回合数显示ui及进入下一回合的按钮ui，同时设置进入新回合的事件，让回合显示刷新订阅此事件
-- 
+- 完成内容：在unit中订阅进入新回合的事件，并重置行动点，为unit添加一个静态的行动点变化事件，让unitActionUI订阅这个事件来进行当前行动点ui渲染
+
+#### Enemy
+
+- 当制作和当前prefab类似的其他prefab时，可以使用当前prefab的prefab variant，相当于继承自原本的prefab并可以进行一定修改
+
+- 完成内容：添加一个enemy prefab variant并添加进scene，修改unit代码让其兼容敌人对象
+- 完成内容：在TurnSystem中添加我方回合、敌方回合的概念，添加敌方回合的标识ui，并让这个ui的更新订阅轮次变化事件、让玩家的跳过回合按钮的显示刷新也订阅轮次变化
+- 完成内容：添加一个简单的enemyAI控制逻辑，控制敌方回合经过两秒钟之后调用NextTurn方法变回我方回合
