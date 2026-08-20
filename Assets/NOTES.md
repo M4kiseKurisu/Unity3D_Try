@@ -226,3 +226,9 @@
 
 - 完成内容：添加shoot action，继承base action，让shoot action测试射击范围内的所有grid，只有上面有敌对单位的时候这个grid才有效（射击距离的计算使用折线距离）
 - 完成内容：在shoot action中添加状态机，在瞄准、射击、冷却三个状态间进行切换和维护，在射击状态才能触发射击动作，为unit添加一个简单的受击逻辑Damaged()，为射击状态添加一个玩家朝向旋转到敌人方向的逻辑
+
+#### Unit Animator
+
+- 只需要单独检测进入状态，这个状态中实施一遍后自动退出，这种情况可以考虑使用trigger进行指示，通过have exit time返回
+
+- 完成内容：将所有控制animator的代码统一到UnitAnimator中，为射击添加一个动画状态并使用shoot触发器触发，这个控制代码通过订阅各个action中设置的事件来触发
