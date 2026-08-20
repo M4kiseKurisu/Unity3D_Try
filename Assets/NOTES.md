@@ -232,3 +232,12 @@
 - 只需要单独检测进入状态，这个状态中实施一遍后自动退出，这种情况可以考虑使用trigger进行指示，通过have exit time返回
 
 - 完成内容：将所有控制animator的代码统一到UnitAnimator中，为射击添加一个动画状态并使用shoot触发器触发，这个控制代码通过订阅各个action中设置的事件来触发
+
+#### Shooting Bullet Visual
+
+- 类似子弹轨迹这种特效，可以使用effect > trail来实现，通过调整trail renderer中的图可以控制轨迹的粗细情况，通过调整time调节轨迹出现时间，AutoDestruct控制轨迹没有长度时自动销毁
+- 如果为了material添加闪光效果，可以添加emission
+- 可以使用public class OnShootEventArgs : EventArgs {}这种方法来自定义EventHandler传递的参数。调用方法：public event EventHandler<OnShootEventArgs> OnShoot;
+- 类似子弹爆炸的特效可以考虑particle system
+
+- 完成内容：添加一个具体的射击动画状态，并添加对应的射击轨道及击中特效
