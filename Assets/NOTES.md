@@ -247,3 +247,11 @@
 - 在删除对象的时候，注意对象上挂载的事件订阅要及时使用-=解除订阅
 
 - 完成内容：为Unit添加了一个HealthSystem记录当前hp，并提供方法造成伤害，创建一个角色死亡事件供其他部分调用，在Unit中订阅此事件并销毁对象
+
+#### Ragdoll
+
+- 可以在GameObject > 3D Object > Ragdoll中将一个人物的各个关节加入对应部分并创建的方式为人物创建Ragdoll（理解为在场景中会直接倒下的“布娃娃”）
+- 可以使用RigidBody.AddExplosionForce来为一个对象添加爆炸力，参数包括：float explosionForce, Vector3 explosionPosition, float explosionRange
+
+- 完成内容：使用Ragdoll创建一个Unit的布偶，来模拟对象死亡时倒下的状态，同时创建一个Prefab Variant来为敌人创建红色材质的Ragdoll
+- 完成内容：在创建Ragdoll的时候，需要将当前对象的Transform递归的进行position和rotation的复制，这样生成的Ragdoll的初始状态就不是默认的T-pose了，同时在Ragdoll生成时递归的为其各个部分添加一个ExplosionForce，模拟死亡效果
