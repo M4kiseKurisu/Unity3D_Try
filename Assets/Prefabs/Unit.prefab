@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 5732595260025969934}
   - component: {fileID: 3078598604883574147}
   - component: {fileID: 9153613284539639563}
+  - component: {fileID: 355645305411497906}
   m_Layer: 7
   m_Name: Unit
   m_TagString: Untagged
@@ -156,6 +157,18 @@ MonoBehaviour:
   animator: {fileID: 6197062002087058705}
   bulletProjectilePrefab: {fileID: 56582240021715591, guid: 23b3378544d974f4da2e57f520754159, type: 3}
   shootPointTransform: {fileID: 6855399190892268876}
+--- !u!114 &355645305411497906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3918104638863543879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d35ae32baf40e4a0ab59ae350f0b2b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
 --- !u!1 &7614949507732061260
 GameObject:
   m_ObjectHideFlags: 0
