@@ -255,3 +255,12 @@
 
 - 完成内容：使用Ragdoll创建一个Unit的布偶，来模拟对象死亡时倒下的状态，同时创建一个Prefab Variant来为敌人创建红色材质的Ragdoll
 - 完成内容：在创建Ragdoll的时候，需要将当前对象的Transform递归的进行position和rotation的复制，这样生成的Ragdoll的初始状态就不是默认的T-pose了，同时在Ragdoll生成时递归的为其各个部分添加一个ExplosionForce，模拟死亡效果
+
+#### Unit World UI
+
+- 可以在Prefab中添加Canvas并将其Render Mode改成World，这样UI就在世界坐标系下进行渲染了
+- 在更新时如果需要考虑顺序，可以将一定最后运行的逻辑放在LateUpdate中，LateUpdate事件函数一定会在所有Update事件函数之后触发
+- 可以使用transform.LookAt让某个transform的朝向偏向LookAt中传入的transform，但是要考虑是否需要反转这个transform的问题
+- 可以将image的模式改成filled，用来模拟血条这样的对象
+
+- 完成内容：为每一个Unit添加一个血量条和一个行动点的ui，血量条使用Filled模式的Image实现，同时让这两个ui的刷新方法订阅血量、行动点变化的事件
