@@ -264,3 +264,9 @@
 - 可以将image的模式改成filled，用来模拟血条这样的对象
 
 - 完成内容：为每一个Unit添加一个血量条和一个行动点的ui，血量条使用Filled模式的Image实现，同时让这两个ui的刷新方法订阅血量、行动点变化的事件
+
+#### Action Camera
+
+- 可以为Cinemachine设置Priority，这样可以使用优先级比较确定当前使用哪个Virtual Camera，这个不同相机间的切换过程在CinemachineBrain中的Default Blend确定
+
+- 完成内容：添加一个Action Camera，并且为Base Action添加两个事件（Action开始和结束），让Action Camera的显示、隐藏方法订阅相关事件，同时在Action Camera被切换的时候需要计算这个相机的过肩视角位置
