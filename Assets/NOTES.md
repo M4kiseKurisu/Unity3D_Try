@@ -270,3 +270,12 @@
 - 可以为Cinemachine设置Priority，这样可以使用优先级比较确定当前使用哪个Virtual Camera，这个不同相机间的切换过程在CinemachineBrain中的Default Blend确定
 
 - 完成内容：添加一个Action Camera，并且为Base Action添加两个事件（Action开始和结束），让Action Camera的显示、隐藏方法订阅相关事件，同时在Action Camera被切换的时候需要计算这个相机的过肩视角位置
+
+#### Grid Visual Colors
+
+- 当需要在[SerializeField]后面添加自定义的struct时，需要为这个struct添加一个[Serializable]标签
+- 在代码中修改enum的构成的时候，注意Unity中因为存储的枚举值不会改变，有可能导致枚举错位
+
+- 完成内容：修改GridSystemVisual，让当前可达地块的显示不要在每个Update更新，而是只在事件切换或者玩家移动时更新，让相关更新方法订阅这两个对应的事件
+- 完成内容：为每一个Grid的边框添加不同类型的材质，并且在GridSystemVisual中保存，在接受不同Action时将Grid的外观切换至不同颜色的Material
+- 完成内容：为shoot action添加一个浅红色的grid效果，用来显示射程范围内的grid
