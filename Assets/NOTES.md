@@ -279,3 +279,9 @@
 - 完成内容：修改GridSystemVisual，让当前可达地块的显示不要在每个Update更新，而是只在事件切换或者玩家移动时更新，让相关更新方法订阅这两个对应的事件
 - 完成内容：为每一个Grid的边框添加不同类型的材质，并且在GridSystemVisual中保存，在接受不同Action时将Grid的外观切换至不同颜色的Material
 - 完成内容：为shoot action添加一个浅红色的grid效果，用来显示射程范围内的grid
+
+#### Enemy AI Basic
+
+- 完成内容：为EnemyAI添加一个状态enum并维护，添加一个UnitManager，内部使用List存储当前存在的Unit（并且区分我方、敌方Unit）
+- 完成内容：为Unit添加两个静态事件：Unit生成及死亡，确保任意单位生成及死亡时触发，为了保证UnitManager监听这两个事件发生在其他相关事件之前，在Unity中设置运行顺序
+- 完成内容：在EnemyAI中获取UnitManager的EnemyUnitList，并尝试让所有敌方对象进行Action
