@@ -285,3 +285,10 @@
 - 完成内容：为EnemyAI添加一个状态enum并维护，添加一个UnitManager，内部使用List存储当前存在的Unit（并且区分我方、敌方Unit）
 - 完成内容：为Unit添加两个静态事件：Unit生成及死亡，确保任意单位生成及死亡时触发，为了保证UnitManager监听这两个事件发生在其他相关事件之前，在Unity中设置运行顺序
 - 完成内容：在EnemyAI中获取UnitManager的EnemyUnitList，并尝试让所有敌方对象进行Action
+
+#### Enemy AI Complex
+
+- 对于一个List，可以使用Sort进行自动排序，需要人工为Sort方法提供比较函数，可以采用匿名函数实现
+
+- 完成内容：使用一个EnemyAIAction类储存敌人可能采用一个动作的分数，然后为每个Action添加一个计算当前动作分数（即生成EnemyAIAction数据类）
+- 完成内容：每次查询当前存在的所有敌人的最优动作，再综合选出一个动作作为当前要做的动作
