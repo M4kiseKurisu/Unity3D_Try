@@ -299,3 +299,9 @@
 - 可以使用where T : ..来对交互的类类型进行规定
 
 - 完成内容：统一BaseAction的获取，将Unit中对于不同Action的引用和获取换成对BaseAction泛型操作的方法
+
+#### Grid System Generics
+
+- GridSystem<TGridObject> where TGridObject : new()使用这种方法可以确保TGridObject泛型拥有new构造方法，也可以考虑向GridSystem的构造方法中添加作为TGridObject构造方法的委托参数
+
+- 完成内容：将GridSystem改为泛型GridSystem<TGridObject>（用TGridObject替换原来写死的GridObject），后续可用类似代码框架完成寻路系统
