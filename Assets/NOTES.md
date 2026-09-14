@@ -305,3 +305,9 @@
 - GridSystem<TGridObject> where TGridObject : new()使用这种方法可以确保TGridObject泛型拥有new构造方法，也可以考虑向GridSystem的构造方法中添加作为TGridObject构造方法的委托参数
 
 - 完成内容：将GridSystem改为泛型GridSystem<TGridObject>（用TGridObject替换原来写死的GridObject），后续可用类似代码框架完成寻路系统
+
+#### Pathfinding Script
+
+- 使用A*寻路算法，本质是计算每个格子到起始位置的花费和到达终点的预计花费（即假设没有障碍），然后计算二者之和，每次移动选择可达的二者和最小的格子作为下一步
+
+- 完成内容：为寻路算法添加属于自己的系统Pathfinding，其中使用GridSystem<PathNode>进行记录，PathNode记录每一格的cost情况，并且使用PathfindingGridDebugObject在地图中显示相关信息
