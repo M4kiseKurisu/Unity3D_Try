@@ -311,3 +311,6 @@
 - 使用A*寻路算法，本质是计算每个格子到起始位置的花费和到达终点的预计花费（即假设没有障碍），然后计算二者之和，每次移动选择可达的二者和最小的格子作为下一步
 
 - 完成内容：为寻路算法添加属于自己的系统Pathfinding，其中使用GridSystem<PathNode>进行记录，PathNode记录每一格的cost情况，并且使用PathfindingGridDebugObject在地图中显示相关信息
+
+#### Pathfinding Implementation
+
